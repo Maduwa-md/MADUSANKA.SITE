@@ -506,6 +506,113 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+
+    <!-- =================================
+     MADUSANKA AI ASSISTANT
+================================= -->
+
+<button
+  class="ai-launcher"
+  id="aiLauncher"
+  aria-label="Open AI Assistant"
+  title="AI Assistant"
+>
+  🤖
+</button>
+
+
+<div class="ai-window" id="aiWindow">
+
+  <!-- HEADER -->
+  <div class="ai-header">
+
+    <div class="ai-avatar">
+      🤖
+    </div>
+
+    <div class="ai-title">
+      <strong>Madusanka AI</strong>
+
+      <span>
+        <i class="ai-online-dot"></i>
+        AI Assistant
+      </span>
+    </div>
+
+    <button
+      class="ai-close"
+      id="aiClose"
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+  </div>
+
+
+  <!-- MESSAGES -->
+  <div
+    class="ai-messages"
+    id="aiMessages"
+  ></div>
+
+
+  <!-- QUICK QUESTIONS -->
+  <div class="ai-quick">
+
+    <button
+      data-question="Who is Madusanka?"
+    >
+      👤 About
+    </button>
+
+    <button
+      data-question="What are Madusanka's skills?"
+    >
+      🛠️ Skills
+    </button>
+
+    <button
+      data-question="What projects has Madusanka created?"
+    >
+      🚀 Projects
+    </button>
+
+    <button
+      data-question="How can I contact Madusanka?"
+    >
+      📞 Contact
+    </button>
+
+  </div>
+
+
+  <!-- INPUT -->
+  <div class="ai-input-area">
+
+    <input
+      type="text"
+      id="aiInput"
+      class="ai-input"
+      placeholder="Ask me anything..."
+      autocomplete="off"
+      maxlength="2000"
+    >
+
+    <button
+      id="aiSend"
+      class="ai-send"
+      aria-label="Send"
+    >
+      ➤
+    </button>
+
+  </div>
+
+</div>
+
+
+<script src="ai.js"></script>
     
 </body>
   </html>
