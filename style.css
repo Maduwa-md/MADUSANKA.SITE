@@ -1387,3 +1387,49 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 12px 30px rgba(0, 234, 255, 0.3);
 }
+
+.admin-access {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+
+  color: #fff !important;
+  text-decoration: none !important;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  border: 1px solid rgba(0, 234, 255, 0.25);
+  border-radius: 25px;
+
+  background: rgba(5, 15, 30, 0.65);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 0 18px rgba(0, 234, 255, 0.08);
+
+  z-index: 9999;
+
+  transition: 0.3s ease;
+}
+
+.admin-icon {
+  font-size: 17px;
+  color: #00eaff;
+}
+
+.admin-access:hover {
+  transform: translateY(-2px);
+
+  border-color: #00eaff;
+
+  box-shadow:
+    0 0 20px rgba(0, 234, 255, 0.25);
+    }
