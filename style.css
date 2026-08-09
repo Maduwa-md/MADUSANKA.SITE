@@ -1359,3 +1359,31 @@ body {
     font-size: 16px;
   }
         }
+
+.admin-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  margin-top: 15px;
+
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    90deg,
+    #00eaff,
+    #7048ff,
+    #ff00cc
+  );
+
+  box-shadow: 0 8px 25px rgba(0, 234, 255, 0.15);
+
+  transition: 0.3s;
+}
+
+.admin-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 234, 255, 0.3);
+}
