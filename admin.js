@@ -8,7 +8,7 @@
    🔐 CHANGE YOUR PASSWORD HERE
 ========================================== */
 
-const ADMIN_PASSWORD = "12345678";
+const ADMIN_PASSWORD = "madusanka2009";
 
 
 /* ==========================================
