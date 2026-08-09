@@ -1,0 +1,13 @@
+{
+  "name": "madusanka-portfolio",
+  "version": "1.0.0",
+  "description": "Madusanka Personal Portfolio with AI Assistant",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "dotenv": "^17.2.1"
+  }
+}
