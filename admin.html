@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Admin Dashboard</title>
+
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+  <!-- ================= LOGIN ================= -->
+
+  <div id="loginPage" class="login-page">
+
+    <div class="login-box">
+
+      <div class="logo">
+        M
+      </div>
+
+      <h1>Admin Login</h1>
+
+      <p>Welcome to your dashboard 👋</p>
+
+      <div class="input-group">
+        <label>Password</label>
+
+        <div class="password-box">
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter password"
+            autocomplete="off"
+          >
+
+          <button
+            type="button"
+            id="showPassword"
+          >
+            👁️
+          </button>
+        </div>
+      </div>
+
+      <button
+        class="login-btn"
+        id="loginBtn"
+      >
+        🔐 Login
+      </button>
+
+      <p
+        id="loginError"
+        class="login-error"
+      ></p>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= DASHBOARD ================= -->
+
+  <div
+    id="dashboard"
+    class="dashboard hidden"
+  >
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <div class="brand">
+
+        <div class="brand-logo">
+          M
+        </div>
+
+        <div>
+          <strong>MADUSANKA</strong>
+          <small>ADMIN PANEL</small>
+        </div>
+
+      </div>
+
+
+      <nav class="menu">
+
+        <button
+          class="menu-btn active"
+          data-section="overview"
+        >
+          📊
+          <span>Overview</span>
+        </button>
+
+        <button
+          class="menu-btn"
+          data-section="projects"
+        >
+          🚀
+          <span>Projects</span>
+        </button>
+
+        <button
+          class="menu-btn"
+          data-section="skills"
+        >
+          🛠️
+          <span>Skills</span>
+        </button>
+
+        <button
+          class="menu-btn"
+          data-section="about"
+        >
+          👤
+          <span>About Me</span>
+        </button>
+
+        <button
+          class="menu-btn"
+          data-section="messages"
+        >
+          💬
+          <span>Messages</span>
+        </button>
+
+        <button
+          class="menu-btn"
+          data-section="settings"
+        >
+          ⚙️
+          <span>Settings</span>
+        </button>
+
+      </nav>
+
+
+      <button
+        id="logoutBtn"
+        class="logout-btn"
+      >
+        🚪
+        <span>Logout</span>
+      </button>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main">
+
+      <!-- TOP BAR -->
+
+      <header class="topbar">
+
+        <div>
+
+          <button
+            id="mobileMenuBtn"
+            class="mobile-menu"
+          >
+            ☰
+          </button>
+
+          <div class="page-heading">
+
+            <h1 id="pageTitle">
+              Dashboard
+            </h1>
+
+            <p id="pageSubtitle">
+              Welcome back 👋
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="admin-status">
+          <span class="status-dot"></span>
+          Online
+        </div>
+
+      </header>
+
+
+      <!-- ================= OVERVIEW ================= -->
+
+      <section
+        id="overview"
+        class="page-section"
+      >
+
+        <div class="section-title">
+
+          <div>
+            <h2>Overview</h2>
+            <p>Your website statistics</p>
+          </div>
+
+        </div>
+
+
+        <div class="stats-grid">
+
+          <div class="stat-card">
+
+            <div class="stat-icon">
+              👁️
+            </div>
+
+            <div>
+              <span>Total Visitors</span>
+              <h3 id="totalVisitors">
+                0
+              </h3>
+            </div>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <div class="stat-icon">
+              🚀
+            </div>
+
+            <div>
+              <span>Projects</span>
+              <h3 id="totalProjects">
+                0
+              </h3>
+            </div>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <div class="stat-icon">
+              🛠️
+            </div>
+
+            <div>
+              <span>Skills</span>
+              <h3 id="totalSkills">
+                0
+              </h3>
+            </div>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <div class="stat-icon">
+              💬
+            </div>
+
+            <div>
+              <span>Messages</span>
+              <h3 id="totalMessages">
+                0
+              </h3>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="welcome-card">
+
+          <div>
+
+            <span class="small-label">
+              YOUR PORTFOLIO
+            </span>
+
+            <h2>
+              Keep building something amazing 🚀
+            </h2>
+
+            <p>
+              Manage your projects, skills and
+              personal information from here.
+            </p>
+
+          </div>
+
+          <div class="big-emoji">
+            💻
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= PROJECTS ================= -->
+
+      <section
+        id="projects"
+        class="page-section hidden"
+      >
+
+        <div class="section-title">
+
+          <div>
+            <h2>Projects</h2>
+            <p>Manage your projects</p>
+          </div>
+
+          <button
+            class="primary-btn"
+            id="addProjectBtn"
+          >
+            + Add Project
+          </button>
+
+        </div>
+
+
+        <div
+          id="projectsList"
+          class="cards-list"
+        ></div>
+
+      </section>
+
+
+      <!-- ================= SKILLS ================= -->
+
+      <section
+        id="skills"
+        class="page-section hidden"
+      >
+
+        <div class="section-title">
+
+          <div>
+            <h2>Skills</h2>
+            <p>Manage your skills</p>
+          </div>
+
+          <button
+            class="primary-btn"
+            id="addSkillBtn"
+          >
+            + Add Skill
+          </button>
+
+        </div>
+
+
+        <div
+          id="skillsList"
+          class="skills-list"
+        ></div>
+
+      </section>
+
+
+      <!-- ================= ABOUT ================= -->
+
+      <section
+        id="about"
+        class="page-section hidden"
+      >
+
+        <div class="section-title">
+
+          <div>
+            <h2>About Me</h2>
+            <p>Edit your personal information</p>
+          </div>
+
+        </div>
+
+
+        <div class="form-card">
+
+          <label>
+            About Title
+          </label>
+
+          <input
+            type="text"
+            id="aboutTitle"
+            placeholder="Example: Hi, I'm Madusanka"
+          >
+
+
+          <label>
+            About Description
+          </label>
+
+          <textarea
+            id="aboutDescription"
+            rows="7"
+            placeholder="Write something about yourself..."
+          ></textarea>
+
+
+          <label>
+            Profile Image URL
+          </label>
+
+          <input
+            type="url"
+            id="profileImage"
+            placeholder="https://..."
+          >
+
+
+          <button
+            class="primary-btn"
+            id="saveAboutBtn"
+          >
+            💾 Save About Me
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= MESSAGES ================= -->
+
+      <section
+        id="messages"
+        class="page-section hidden"
+      >
+
+        <div class="section-title">
+
+          <div>
+            <h2>Messages</h2>
+            <p>Messages saved on this browser</p>
+          </div>
+
+          <button
+            class="danger-btn"
+            id="clearMessagesBtn"
+          >
+            Clear All
+          </button>
+
+        </div>
+
+
+        <div
+          id="messagesList"
+          class="cards-list"
+        ></div>
+
+      </section>
+
+
+      <!-- ================= SETTINGS ================= -->
+
+      <section
+        id="settings"
+        class="page-section hidden"
+      >
+
+        <div class="section-title">
+
+          <div>
+            <h2>Settings</h2>
+            <p>Dashboard settings</p>
+          </div>
+
+        </div>
+
+
+        <div class="settings-card">
+
+          <div class="setting-row">
+
+            <div>
+              <strong>Reset Dashboard Data</strong>
+
+              <p>
+                Delete projects, skills,
+                messages and visitor data.
+              </p>
+            </div>
+
+            <button
+              class="danger-btn"
+              id="resetBtn"
+            >
+              Reset
+            </button>
+
+          </div>
+
+
+          <div class="setting-row">
+
+            <div>
+              <strong>Website</strong>
+
+              <p>
+                Open your public website.
+              </p>
+            </div>
+
+            <button
+              class="secondary-btn"
+              id="websiteBtn"
+            >
+              🌐 Open Site
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- ================= PROJECT MODAL ================= -->
+
+  <div
+    id="projectModal"
+    class="modal hidden"
+  >
+
+    <div class="modal-box">
+
+      <div class="modal-header">
+
+        <h2>Add Project</h2>
+
+        <button
+          class="close-btn"
+          id="closeProjectModal"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <label>Project Name</label>
+
+      <input
+        type="text"
+        id="projectName"
+        placeholder="My Website"
+      >
+
+
+      <label>Description</label>
+
+      <textarea
+        id="projectDescription"
+        rows="4"
+        placeholder="Project description..."
+      ></textarea>
+
+
+      <label>Image URL</label>
+
+      <input
+        type="url"
+        id="projectImage"
+        placeholder="https://..."
+      >
+
+
+      <label>Live Demo URL</label>
+
+      <input
+        type="url"
+        id="projectDemo"
+        placeholder="https://..."
+      >
+
+
+      <label>GitHub URL</label>
+
+      <input
+        type="url"
+        id="projectGithub"
+        placeholder="https://github.com/..."
+      >
+
+
+      <button
+        class="primary-btn full-btn"
+        id="saveProjectBtn"
+      >
+        🚀 Add Project
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= SKILL MODAL ================= -->
+
+  <div
+    id="skillModal"
+    class="modal hidden"
+  >
+
+    <div class="modal-box">
+
+      <div class="modal-header">
+
+        <h2>Add Skill</h2>
+
+        <button
+          class="close-btn"
+          id="closeSkillModal"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <label>Skill Name</label>
+
+      <input
+        type="text"
+        id="skillName"
+        placeholder="JavaScript"
+      >
+
+
+      <label>Skill Percentage</label>
+
+      <input
+        type="number"
+        id="skillPercentage"
+        min="0"
+        max="100"
+        placeholder="80"
+      >
+
+
+      <button
+        class="primary-btn full-btn"
+        id="saveSkillBtn"
+      >
+        🛠️ Add Skill
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script src="admin.js"></script>
+
+</body>
+            </html>
