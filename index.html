@@ -614,6 +614,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 <script src="ai.js"></script>
+
+    <script>
+const openIdCard = document.getElementById("openIdCard");
+const closeIdCard = document.getElementById("closeIdCard");
+const idModal = document.getElementById("idModal");
+
+openIdCard.addEventListener("click", () => {
+  idModal.classList.add("active");
+});
+
+closeIdCard.addEventListener("click", () => {
+  idModal.classList.remove("active");
+});
+
+idModal.addEventListener("click", (e) => {
+  if (e.target === idModal) {
+    idModal.classList.remove("active");
+  }
+});
+
+function shareID() {
+  if (navigator.share) {
+    navigator.share({
+      title: "Madusanka Digital ID",
+      text: "Check out Madusanka's Digital ID Card!",
+      url: window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href);
+    alert("Digital ID link copied!");
+  }
+}
+
+function contactMe() {
+  window.open(
+    "https://wa.me/+94772298468",
+    "_blank"
+  );
+}
+    </script>
     
 </body>
   </html>
