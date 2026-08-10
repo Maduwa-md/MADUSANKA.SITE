@@ -39,16 +39,7 @@
 
     <!-- Hero Section -->
     <!-- ================= MY SKILLS ================= -->
-    <button class="digital-id-btn" id="openIdCard">
-  <span class="id-btn-icon">✦</span>
-  <span class="id-btn-text">
-    <strong>Digital ID</strong>
-    <small>View Profile</small>
-  </span>
-  <span class="id-btn-arrow">↗</span>
-    </button>
-    
-    <section id="home" class="hero">
+     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-badge">
                 <span class="pulse-dot"></span>
@@ -624,129 +615,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <script src="ai.js"></script>
 
-    <script>
-const openIdCard = document.getElementById("openIdCard");
-const closeIdCard = document.getElementById("closeIdCard");
-const idModal = document.getElementById("idModal");
 
-openIdCard.addEventListener("click", () => {
-  idModal.classList.add("active");
-});
-
-closeIdCard.addEventListener("click", () => {
-  idModal.classList.remove("active");
-});
-
-idModal.addEventListener("click", (e) => {
-  if (e.target === idModal) {
-    idModal.classList.remove("active");
-  }
-});
-
-function shareID() {
-  if (navigator.share) {
-    navigator.share({
-      title: "Madusanka Digital ID",
-      text: "Check out Madusanka's Digital ID Card!",
-      url: window.location.href
-    });
-  } else {
-    navigator.clipboard.writeText(window.location.href);
-    alert("Digital ID link copied!");
-  }
-}
-
-function contactMe() {
-  window.open(
-    "https://wa.me/+94772298468",
-    "_blank"
-  );
-}
-
-        <body>
-
-  <!-- ඔයාගේ Header -->
-  <header>
-    ...
-  </header>
-
-  <!-- ඔයාගේ Main Content -->
-  <main>
-    ...
-  </main>
-
-  <!-- Digital ID Button -->
-  <button class="digital-id-btn" id="openIdCard">
-    <span class="id-btn-icon">✦</span>
-    <span class="id-btn-text">
-      <strong>Digital ID</strong>
-      <small>View Profile</small>
-    </span>
-    <span class="id-btn-arrow">↗</span>
-  </button>
-
-
-  <!-- 👇 මේක මෙතන දාන්න -->
-  <div class="id-modal" id="idModal">
-
-    <div class="digital-card">
-
-      <button class="id-close" id="closeIdCard">×</button>
-
-      <div class="id-top">
-        <span>PERSONAL ID</span>
-        <span>v1.0</span>
-      </div>
-
-      <div class="id-profile">
-        <div class="id-avatar">
-          👤
-        </div>
-
-        <h2>MADUSANKA</h2>
-        <p>Web Developer & Creator</p>
-      </div>
-
-      <div class="id-line"></div>
-
-      <div class="id-info">
-        <div>
-          <small>ID</small>
-          <strong>MADU-001</strong>
-        </div>
-
-        <div>
-          <small>STATUS</small>
-          <strong class="available">● AVAILABLE</strong>
-        </div>
-      </div>
-
-      <div class="id-skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Node.js</span>
-      </div>
-
-      <div class="id-actions">
-        <button onclick="contactMe()">📞 Contact</button>
-        <button onclick="shareID()">↗ Share</button>
-      </div>
-
-      <div class="id-footer">
-        MADUSANKA • DIGITAL ID
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- JavaScript -->
-  <script>
-    // ඔයාගේ Digital ID JavaScript එක මෙතන
-  </script>
-
-    </script>
-    
-</body>
+     </body>
   </html>
